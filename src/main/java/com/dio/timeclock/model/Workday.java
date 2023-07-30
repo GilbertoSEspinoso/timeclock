@@ -1,8 +1,6 @@
 package com.dio.timeclock.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -15,6 +13,7 @@ import lombok.*;
 @Table(name = "tb_workday")
 public class Workday {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
 }
