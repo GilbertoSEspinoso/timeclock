@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class Enterprise {
+public class Company {
     private Long id;
     private String description;
     private String cnpj;
