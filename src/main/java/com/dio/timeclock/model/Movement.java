@@ -1,7 +1,6 @@
 package com.dio.timeclock.model;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -13,8 +12,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Table(name = "tb_movement")
 public class Movement {
     @EmbeddedId
+    @Id
     private MovementId id;
     private LocalDateTime entryTime;
     private LocalDateTime exitTime;
