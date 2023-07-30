@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class WorkingDay {
+public class Workday {
     private Long id;
     private String description;
 }
