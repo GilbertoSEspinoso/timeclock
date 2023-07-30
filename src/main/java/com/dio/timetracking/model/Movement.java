@@ -3,7 +3,6 @@ package com.dio.timetracking.model;
 import lombok.*;
 
 import javax.persistence.EmbeddedId;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -22,6 +21,6 @@ public class Movement {
     private BigDecimal period;
     @ManyToOne
     private Event event;
-    @ManyToMany
+    @ManyToOne
     private Calendar calendar;
 }
