@@ -1,14 +1,20 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.15-SNAPSHOT'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'org.springframework.boot' version '3.2.0-SNAPSHOT'
+    id 'io.spring.dependency-management' version '1.1.2'
 }
 
 group = 'com.dio'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '11'
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 repositories {
@@ -19,25 +25,18 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.7.14'
-
-    implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
-    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.9.7'
-    implementation 'com.h2database:h2:2.1.214'
-
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.1.2'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.14.2'
+    implementation 'io.springfox:springfox-swagger2:3.0.0'
+    implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+    implementation 'io.springfox:springfox-bean-validators:3.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:3.1.2'
+    implementation 'org.springframework.boot:spring-boot-starter:3.1.2'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
-
-    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
-    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
-    implementation group: 'io.springfox', name: 'springfox-bean-validators', version: '3.0.0'
-
-    implementation group: 'org.hibernate', name: 'hibernate-envers', version: '5.4.17.Final'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.7.0'
-
-
-    implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

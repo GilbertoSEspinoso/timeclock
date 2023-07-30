@@ -1,8 +1,8 @@
-package com.dio.timetracking.model;
+package com.dio.timeclock.model;
 
+import jakarta.persistence.ManyToOne;
 import lombok.*;
 
-import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 

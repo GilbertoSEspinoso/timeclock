@@ -1,8 +1,6 @@
-package com.dio.timetracking.model;
+package com.dio.timeclock.model;
 
 import lombok.*;
-
-import javax.persistence.OneToMany;
 
 @Getter
 @Setter
@@ -10,9 +8,7 @@ import javax.persistence.OneToMany;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class Location {
+public class DateType {
     private Long id;
     private String description;
-    @OneToMany
-    private AccessLevel accessLevel;
 }

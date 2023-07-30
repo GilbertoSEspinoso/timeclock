@@ -1,9 +1,9 @@
-package com.dio.timetracking.model;
+package com.dio.timeclock.model;
 
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.ManyToOne;
 import lombok.*;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 

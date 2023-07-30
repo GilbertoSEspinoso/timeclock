@@ -1,4 +1,4 @@
-package com.dio.timetracking.model;
+package com.dio.timeclock.model;
 
 import lombok.*;
 
@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class DateType {
+public class Workday {
     private Long id;
     private String description;
 }

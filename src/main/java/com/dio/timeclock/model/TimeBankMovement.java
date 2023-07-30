@@ -1,8 +1,8 @@
-package com.dio.timetracking.model;
+package com.dio.timeclock.model;
 
+import jakarta.persistence.Embeddable;
 import lombok.*;
 
-import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 @Getter

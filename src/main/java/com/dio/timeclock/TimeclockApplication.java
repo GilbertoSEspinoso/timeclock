@@ -1,13 +1,13 @@
-package com.dio.timetracking;
+package com.dio.timeclock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TimetrackingApplication {
+public class TimeclockApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TimetrackingApplication.class, args);
+        SpringApplication.run(TimeclockApplication.class, args);
     }
 
 }

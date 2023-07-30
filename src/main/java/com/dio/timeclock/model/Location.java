@@ -1,5 +1,6 @@
-package com.dio.timetracking.model;
+package com.dio.timeclock.model;
 
+import jakarta.persistence.OneToMany;
 import lombok.*;
 
 @Getter
@@ -8,7 +9,9 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class UserCategory {
+public class Location {
     private Long id;
     private String description;
+    @OneToMany
+    private AccessLevel accessLevel;
 }

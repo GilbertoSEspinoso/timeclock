@@ -1,4 +1,4 @@
-package com.dio.timetracking.model;
+package com.dio.timeclock.model;
 
 import lombok.*;
 
